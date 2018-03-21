@@ -54,7 +54,7 @@ __Datasets Graph URI:__
 | LGD (only ways) 	|    "http://geographica.di.uoa.gr/dataset/lgd"   	|
 |     GeoNames    	| "http://geographica.di.uoa.gr/dataset/geonames" 	|
 |     DBpedia     	|  "http://geographica.di.uoa.gr/dataset/dbpedia" 	|
-|     Hotspots    	| "
+|     Hotspots    	| "http://geographica.di.uoa.gr/dataset/hotspots"   |
 
 
 ## `Workload`
@@ -94,6 +94,7 @@ In the macro benchmark we aim to test the performance of the selected RDF stores
 The Experiments are measured through the execution of GeoSPARQL queries depending on the type of benchmark performed:
 
 + Micro Benchmark (29 queries)
+
   - Non-topological construct functions
 
 | Query |  Operation  |                    Description                   |
@@ -122,6 +123,7 @@ The Experiments are measured through the execution of GeoSPARQL queries dependin
 |  Q17  |         Disjoint         |       Find all lines of LGD that are spatially disjoint of a given polygon      |
 
   - Spatial joins
+  
 | Query |  Operation |                                  Description                                 |
 |:-----:|:----------:|:----------------------------------------------------------------------------:|
 |  Q18  |   Equals   | Find all points of GeoNames that are spatially equal with a point of DBpedia |
@@ -136,6 +138,7 @@ The Experiments are measured through the execution of GeoSPARQL queries dependin
 |  Q27  |  Overlaps  |        Find all polygons of CLC that spatially overlap polygons of GAG       |
 
   - Aggregate functions
+  
 | Query | Operation |                   Description                  |
 |:-----:|:---------:|:----------------------------------------------:|
 |  Q28  | Extension | Construct the extension of all polygons of GAG |
@@ -143,13 +146,16 @@ The Experiments are measured through the execution of GeoSPARQL queries dependin
 
 
 + Macro Benchmark (11 queries)
+
   - Reverse Geocoding
+  
 | Query |                    Description                   |
 |:-----:|:------------------------------------------------:|
 |  RG1  | Find the closest populated place (from GeoNames) |
 |  RG2  |        Find the closest street (from LGD)        |
   
   - Map Search and Browsing
+  
 | Query |                                    Description                                   |
 |:-----:|:--------------------------------------------------------------------------------:|
 |  MSB1 |  Find the co-ordinates of a given POI based on thematic criteria (from GeoNames) |
@@ -157,6 +163,7 @@ The Experiments are measured through the execution of GeoSPARQL queries dependin
 | MSB3  | Find other POI in a given bounding box around these co-ordinates (from GeoNames) |
 
   - Rapid Mapping for Fire Monitoring
+  
 | Query |                                             Description                                            |
 |:-----:|:--------------------------------------------------------------------------------------------------:|
 |  RM1  |                 Find the land cover of areas inside a given bounding box (from CLC)                |

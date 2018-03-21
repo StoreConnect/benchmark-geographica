@@ -91,5 +91,16 @@ In the macro benchmark we aim to test the performance of the selected RDF stores
   
   
 ## `Queries`
+The Experiments are measured through the execution of GeoSPARQL queries depending on the type of benchmark performed:
+
++ Micro Benchmark (29 queries)
+  - Non-topological construct functions
   
-  
+  | Query 	|  Operation  	|                    Description                   	|
+|:-----:	|:-----------:	|:------------------------------------------------:	|
+|   Q1  	|   Boundary  	|   Construct the boundary of all polygons of CLC  	|
+|   Q2  	|   Envelope  	|   Construct the envelope of all polygons of CLC  	|
+|   Q3  	| Convex Hull 	| Construct the convex hull of all polygons of CLC 	|
+|   Q4  	|    Buffer   	|  Construct the buffer of all points of GeoNames  	|
+|   Q5  	|    Buffer   	|     Construct the buffer of all lines of LGD     	|
+|   Q6  	|     Area    	|      Compute the area of all polygons of CLC     	|

@@ -96,17 +96,6 @@ The Experiments are measured through the execution of GeoSPARQL queries dependin
 + Micro Benchmark (29 queries)
   - Non-topological construct functions
 
-|     Dataset     	|                    URI                    	|
-|:---------------:	|:-----------------------------------------------:	|
-|       GAG       	|    "http://geographica.di.uoa.gr/dataset/gag"   	|
-|       CLC       	|    "http://geographica.di.uoa.gr/dataset/clc"   	|
-| LGD (only ways) 	|    "http://geographica.di.uoa.gr/dataset/lgd"   	|
-|     GeoNames    	| "http://geographica.di.uoa.gr/dataset/geonames" 	|
-|     DBpedia     	|  "http://geographica.di.uoa.gr/dataset/dbpedia" 	|
-|     Hotspots    	| "
-
-
-
 | Query |  Operation  |                    Description                   |
 |:-----:|:-----------:|:------------------------------------------------:|
 |   Q1  |   Boundary  |   Construct the boundary of all polygons of CLC  |
@@ -116,3 +105,63 @@ The Experiments are measured through the execution of GeoSPARQL queries dependin
 |   Q5  |    Buffer   |     Construct the buffer of all lines of LGD     |
 |   Q6  |     Area    |      Compute the area of all polygons of CLC     |
     
+  - Spatial selections
+  
+| Query |         Operation        |                                   Description                                   |
+|:-----:|:------------------------:|:-------------------------------------------------------------------------------:|
+|   Q7  |          Equals          |         Find all lines of LGD that are spatially equal with a given line        |
+|   Q8  |          Equals          |        Find all polygons of GAG that are spatially equal a given polygon        |
+|   Q9  |        Intersects        |       Find all lines of LGD that spatially intersect with a given polygon       |
+|  Q10  |        Intersects        |       Find all polygons of GAG that spatially intersect with a given line       |
+|  Q11  |         Overlaps         |       Find all polygons of GAG that spatially overlap with a given polygon      |
+|  Q12  |          Crosses         |             Find all lines of LGD that spatially cross a given line             |
+|  Q13  |      Within polygons     |        Find all points of GeoNames that are contained in a given polygon        |
+|  Q14  | Within buffer of a point |  Find all points of GeoNames that are contained in the buffer of a given point  |
+|  Q15  |       Near a point       | Find all points of GeoNames that are within specific distance from a givenpoint |
+|  Q16  |         Disjoint         |    Find all points of GeoNames that are spatially disjoint of a given polygon   |
+|  Q17  |         Disjoint         |       Find all lines of LGD that are spatially disjoint of a given polygon      |
+
+  - Spatial joins
+| Query |  Operation |                                  Description                                 |
+|:-----:|:----------:|:----------------------------------------------------------------------------:|
+|  Q18  |   Equals   | Find all points of GeoNames that are spatially equal with a point of DBpedia |
+|  Q19  | Intersects |      Find all points of GeoNames that spatially intersect a line of LGD      |
+|  Q20  | Intersects |     Find all points of GeoNames that spatially intersect a polygon of GAG    |
+|  Q21  | Intersects |        Find all lines of LGD that spatially intersect a polygon of GAG       |
+|  Q22  |   Within   |         Find all points of GeoNames that are within a polygon of GAG         |
+|  Q23  |   Within   |            Find all lines of LGD that are within a polygon of GAG            |
+|  Q24  |   Within   |           Find all polygons of CLC that are within a polygon of GAG          |
+|  Q25  |   Crosses  |          Find all lines of LGD that spatially cross a polygon of GAG         |
+|  Q26  |   Touches  |      Find all polygons of GAG that spatially touch other polygons of GAG     |
+|  Q27  |  Overlaps  |        Find all polygons of CLC that spatially overlap polygons of GAG       |
+
+  - Aggregate functions
+| Query | Operation |                   Description                  |
+|:-----:|:---------:|:----------------------------------------------:|
+|  Q28  | Extension | Construct the extension of all polygons of GAG |
+|  Q29  |   Union   |   Construct the union of all polygons of GAG   |
+
+
++ Macro Benchmark (11 queries)
+  - Reverse Geocoding
+| Query |                    Description                   |
+|:-----:|:------------------------------------------------:|
+|  RG1  | Find the closest populated place (from GeoNames) |
+|  RG2  |        Find the closest street (from LGD)        |
+  
+  - Map Search and Browsing
+| Query |                                    Description                                   |
+|:-----:|:--------------------------------------------------------------------------------:|
+|  MSB1 |  Find the co-ordinates of a given POI based on thematic criteria (from GeoNames) |
+|  MSB2 |      Find roads in a given bounding box around these co-ordinates (from LGD)     |
+| MSB3  | Find other POI in a given bounding box around these co-ordinates (from GeoNames) |
+
+  - Rapid Mapping for Fire Monitoring
+| Query |                                             Description                                            |
+|:-----:|:--------------------------------------------------------------------------------------------------:|
+|  RM1  |                 Find the land cover of areas inside a given bounding box (from CLC)                |
+|  RM2  |                     )Find primary roads inside a given bounding box (from LGD)                     |
+| RM3   | Find detected hotspots inside a given bounding box (from Hotspots)                                 |
+| RM4   | Find municipality boundaries inside a given bounding box (from GAG)                                |
+| RM5   | Find coniferous forests inside a given bounding box which are on fire (from CLC andHotspots)       |
+| RM6   | Find road segments inside a given bounding box which may be damaged by fire (fromLGD and Hotspots) |

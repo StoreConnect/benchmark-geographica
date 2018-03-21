@@ -60,16 +60,20 @@ __Datasets Graph URI:__
 ## `Workload`
 The **Geographica** workload uses real-world publicly available linked geospatial data. This workload consists of a micro benchmark and a macro benchmark. 
 
-The **Micro Benchmark** aims at testing the efficiency of primitive spatial functions in state of the art geospatial RDF stores. Thus, we use simple SPARQL queries which consist of one or two triple patterns and a spatial function. We start by checking simple spatial selections. Next, we test more complex operations such as spatial joins. We test spatial joins using the
+**Micro Benchmark**
+The Micro Benchmark aims at testing the efficiency of primitive spatial functions in state of the art geospatial RDF stores. Thus, we use simple SPARQL queries which consist of one or two triple patterns and a spatial function. We start by checking simple spatial selections. Next, we test more complex operations such as spatial joins. We test spatial joins using the
 topological relations defined by stSPARQL [9] and the Geometry Topology component of GeoSPARQL.
 Apart from topological relations, we test non topological functions (e.g., geof:buffer), defined by the Geometry extension of GeoSPARQL, which construct a new geometry object. Additionally, we test the metric function strdf:area which is only defined in stSPARQL. The aggregate functions strdf:extent, and strdf:union of stSPARQL are also tested by this benchmark. GeoSPARQL does not define aggregate functions. We include aggregate functions in Geographica since they are present in all geospatial RDBMS.
 
 **Macro Benchmark**
 In the macro benchmark we aim to test the performance of the selected RDF stores in the following typical application scenarios: reverse geocoding, map search and browsing, and two scenarios from the Earth Observation domain.
+
 + Reverse Geocoding.
 Reverse geocoding is the process of attributing a readable address or place name to a given point. Thus, in this scenario, we pose SPARQL queries which sort retrieved objects by their distance to the given point and select the first one.
+
 + Map Search and Browsing.
  This scenario demonstrates the queries that are typically used in Web-based mapping applications. A user first searches for points  of interest based on thematic criteria. Then, she selects a specific point and information about the area around it is retrieved (e.g., POIs and roads).
+ 
 + Rapid Mapping for Wild Fire Monitoring.
  In this scenario we test queries which retrieve map layers for creating a map that can be used by decision makers tasked with the monitoring of wild fires. This application has been studied in detail in project TELEIOS [7] and the scenario covers its core querying needs. First, spatial selections are used to retrieve basic information of interest (e.g., roads, administrative areas etc.). Second more complex information can be derived using spatial joins and non-topological functions. For example, a user maybe interested in the segment of roads that may be damaged by fire. We point out that this scenario is representative of many rapid mapping tasks encountered in Earth Observation applications.
 

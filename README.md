@@ -95,7 +95,19 @@ The Experiments are measured through the execution of GeoSPARQL queries dependin
 
 + Micro Benchmark (29 queries)
   - Non-topological construct functions
- | Query |  Operation  |                    Description                   |
+
+|     Dataset     	|                    URI                    	|
+|:---------------:	|:-----------------------------------------------:	|
+|       GAG       	|    "http://geographica.di.uoa.gr/dataset/gag"   	|
+|       CLC       	|    "http://geographica.di.uoa.gr/dataset/clc"   	|
+| LGD (only ways) 	|    "http://geographica.di.uoa.gr/dataset/lgd"   	|
+|     GeoNames    	| "http://geographica.di.uoa.gr/dataset/geonames" 	|
+|     DBpedia     	|  "http://geographica.di.uoa.gr/dataset/dbpedia" 	|
+|     Hotspots    	| "
+
+
+
+| Query |  Operation  |                    Description                   |
 |:-----:|:-----------:|:------------------------------------------------:|
 |   Q1  |   Boundary  |   Construct the boundary of all polygons of CLC  |
 |   Q2  |   Envelope  |   Construct the envelope of all polygons of CLC  |

@@ -27,9 +27,11 @@ The data using to perform those queries are provided by six datasets:
 + GeoNames Dataset ([download](http://geographica.di.uoa.gr/datasets/geonames.tar.gz))
 + DBPedia Dataset ([download](http://geographica.di.uoa.gr/datasets/dbpedia.tar.gz))
 + Hotspots Dataset ([download](http://geographica.di.uoa.gr/datasets/hotspots.tar.gz))
-  
-  
-###_Datasets specifications:
+
+
+
+
+__Datasets specifications:__
 
 |     Datasets     | Size  | Triples | # of Points   | # of Lines | # of Polygons |
 |:---------------:|:-------:|:---------:|:-------------:|:------------:|:-----------:|
@@ -39,6 +41,7 @@ The data using to perform those queries are provided by six datasets:
 |     GeoNames    | 45MB  | 400K    | 22K         | -          | -         |
 |     DBpedia     | 89MB  | 430K    | 8K          |            |           |
 |      Hostspots           | 90MB      |  450K       | -             | -            |  37K          |
+
 
 
 
@@ -63,6 +66,10 @@ The Micro Benchmark aims at testing the efficiency of primitive spatial function
 topological relations defined by stSPARQL [9] and the Geometry Topology component of GeoSPARQL.
 Apart from topological relations, we test non topological functions (e.g., geof:buffer), defined by the Geometry extension of GeoSPARQL, which construct a new geometry object. Additionally, we test the metric function strdf:area which is only defined in stSPARQL. The aggregate functions strdf:extent, and strdf:union of stSPARQL are also tested by this benchmark. GeoSPARQL does not define aggregate functions. We include aggregate functions in Geographica since they are present in all geospatial RDBMS.
 
+
+
+
+
 **Macro Benchmark**
 
 In the macro benchmark we aim to test the performance of the selected RDF stores in the following typical application scenarios: reverse geocoding, map search and browsing, and two scenarios from the Earth Observation domain.
@@ -71,10 +78,12 @@ In the macro benchmark we aim to test the performance of the selected RDF stores
 
   Reverse geocoding is the process of attributing a readable address or place name to a given point. Thus, in this scenario, we pose SPARQL queries which sort retrieved objects by their distance to the given point and select the first one.
 
+
 + Map Search and Browsing.
 
   This scenario demonstrates the queries that are typically used in Web-based mapping applications. A user first searches for points  of interest based on thematic criteria. Then, she selects a specific point and information about the area around it is retrieved (e.g., POIs and roads).
  
+
 + Rapid Mapping for Wild Fire Monitoring.
 
   In this scenario we test queries which retrieve map layers for creating a map that can be used by decision makers tasked with the monitoring of wild fires. This application has been studied in detail in project TELEIOS [7] and the scenario covers its core querying needs. First, spatial selections are used to retrieve basic information of interest (e.g., roads, administrative areas etc.). Second more complex information can be derived using spatial joins and non-topological functions. For example, a user maybe interested in the segment of roads that may be damaged by fire. We point out that this scenario is representative of many rapid mapping tasks encountered in Earth Observation applications.

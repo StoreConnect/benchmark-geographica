@@ -172,3 +172,6 @@ The Experiments are measured through the execution of GeoSPARQL queries dependin
 | RM4   | Find municipality boundaries inside a given bounding box (from GAG)                                |
 | RM5   | Find coniferous forests inside a given bounding box which are on fire (from CLC andHotspots)       |
 | RM6   | Find road segments inside a given bounding box which may be damaged by fire (fromLGD and Hotspots) |
+
+
+## `Experiments`

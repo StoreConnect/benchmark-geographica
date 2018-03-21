@@ -65,6 +65,7 @@ topological relations defined by stSPARQL [9] and the Geometry Topology componen
 Apart from topological relations, we test non topological functions (e.g., geof:buffer), defined by the Geometry extension of GeoSPARQL, which construct a new geometry object. Additionally, we test the metric function strdf:area which is only defined in stSPARQL. The aggregate functions strdf:extent, and strdf:union of stSPARQL are also tested by this benchmark. GeoSPARQL does not define aggregate functions. We include aggregate functions in Geographica since they are present in all geospatial RDBMS.
 
 **Macro Benchmark**
+
 In the macro benchmark we aim to test the performance of the selected RDF stores in the following typical application scenarios: reverse geocoding, map search and browsing, and two scenarios from the Earth Observation domain.
 
 + Reverse Geocoding.

@@ -29,9 +29,6 @@ The data using to perform those queries are provided by six datasets:
 + Hotspots Dataset ([download](http://geographica.di.uoa.gr/datasets/hotspots.tar.gz))
   
   
-  
-  
-  
 __Datasets specifications:__
 
 |     Datasets     | Size  | Triples | # of Points   | # of Lines | # of Polygons |
@@ -61,6 +58,8 @@ __Datasets Graph URI:__
 The **Geographica** workload uses real-world publicly available linked geospatial data. This workload consists of a micro benchmark and a macro benchmark. 
 
 **Micro Benchmark**
+
+
 The Micro Benchmark aims at testing the efficiency of primitive spatial functions in state of the art geospatial RDF stores. Thus, we use simple SPARQL queries which consist of one or two triple patterns and a spatial function. We start by checking simple spatial selections. Next, we test more complex operations such as spatial joins. We test spatial joins using the
 topological relations defined by stSPARQL [9] and the Geometry Topology component of GeoSPARQL.
 Apart from topological relations, we test non topological functions (e.g., geof:buffer), defined by the Geometry extension of GeoSPARQL, which construct a new geometry object. Additionally, we test the metric function strdf:area which is only defined in stSPARQL. The aggregate functions strdf:extent, and strdf:union of stSPARQL are also tested by this benchmark. GeoSPARQL does not define aggregate functions. We include aggregate functions in Geographica since they are present in all geospatial RDBMS.

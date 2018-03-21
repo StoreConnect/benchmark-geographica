@@ -93,9 +93,9 @@ In the macro benchmark we aim to test the performance of the selected RDF stores
 ## `Queries`
 The Experiments are measured through the execution of GeoSPARQL queries depending on the type of benchmark performed:
 
-+ Micro Benchmark (29 queries)
+###  Micro Benchmark (29 queries)
 
-  - Non-topological construct functions
+  #### `Non-topological construct functions`
 
 | Query |  Operation  |                    Description                   |
 |:-----:|:-----------:|:------------------------------------------------:|
@@ -106,7 +106,7 @@ The Experiments are measured through the execution of GeoSPARQL queries dependin
 |   Q5  |    Buffer   |     Construct the buffer of all lines of LGD     |
 |   Q6  |     Area    |      Compute the area of all polygons of CLC     |
     
-  - Spatial selections
+  #### `Spatial selections`
   
 | Query |         Operation        |                                   Description                                   |
 |:-----:|:------------------------:|:-------------------------------------------------------------------------------:|
@@ -122,7 +122,7 @@ The Experiments are measured through the execution of GeoSPARQL queries dependin
 |  Q16  |         Disjoint         |    Find all points of GeoNames that are spatially disjoint of a given polygon   |
 |  Q17  |         Disjoint         |       Find all lines of LGD that are spatially disjoint of a given polygon      |
 
-  - Spatial joins
+  #### `Spatial joins`
   
 | Query |  Operation |                                  Description                                 |
 |:-----:|:----------:|:----------------------------------------------------------------------------:|
@@ -137,7 +137,7 @@ The Experiments are measured through the execution of GeoSPARQL queries dependin
 |  Q26  |   Touches  |      Find all polygons of GAG that spatially touch other polygons of GAG     |
 |  Q27  |  Overlaps  |        Find all polygons of CLC that spatially overlap polygons of GAG       |
 
-  - Aggregate functions
+   #### `Aggregate functions`
   
 | Query | Operation |                   Description                  |
 |:-----:|:---------:|:----------------------------------------------:|
@@ -145,16 +145,16 @@ The Experiments are measured through the execution of GeoSPARQL queries dependin
 |  Q29  |   Union   |   Construct the union of all polygons of GAG   |
 
 
-+ Macro Benchmark (11 queries)
+### Macro Benchmark (11 queries)
 
-  - Reverse Geocoding
+  #### `Reverse Geocoding`
   
 | Query |                    Description                   |
 |:-----:|:------------------------------------------------:|
 |  RG1  | Find the closest populated place (from GeoNames) |
 |  RG2  |        Find the closest street (from LGD)        |
   
-  - Map Search and Browsing
+  #### `Map Search and Browsing`
   
 | Query |                                    Description                                   |
 |:-----:|:--------------------------------------------------------------------------------:|
@@ -162,7 +162,7 @@ The Experiments are measured through the execution of GeoSPARQL queries dependin
 |  MSB2 |      Find roads in a given bounding box around these co-ordinates (from LGD)     |
 | MSB3  | Find other POI in a given bounding box around these co-ordinates (from GeoNames) |
 
-  - Rapid Mapping for Fire Monitoring
+  #### `Rapid Mapping for Fire Monitoring`
   
 | Query |                                             Description                                            |
 |:-----:|:--------------------------------------------------------------------------------------------------:|

@@ -29,7 +29,7 @@ The data using to perform those queries are provided by six datasets:
 + Hotspots Dataset ([download](http://geographica.di.uoa.gr/datasets/hotspots.tar.gz))
   
   
-__Datasets specifications:__
+###_Datasets specifications:
 
 |     Datasets     | Size  | Triples | # of Points   | # of Lines | # of Polygons |
 |:---------------:|:-------:|:---------:|:-------------:|:------------:|:-----------:|

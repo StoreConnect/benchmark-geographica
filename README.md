@@ -175,3 +175,16 @@ The Experiments are measured through the execution of GeoSPARQL queries dependin
 
 
 ## `Experiments`
+There are seven main experiments, each one coded as a Java Class:
+
+###  Micro Benchmark
+
+|              Experiment             | Queries |                                Class                                |
+|:-----------------------------------:|:-------:|:-------------------------------------------------------------------:|
+| Non-topological construct functions |  Q1-Q6  | gr.uoa.di.rdf.Geographica.experiments.MicroNonTopologicalExperiment |
+|          Spatial selections         |  Q7-Q17 |   gr.uoa.di.rdf.Geographica.experiments.MicroSelectionsExperiment   |
+|            Spatial joins            | Q18-Q27 |      gr.uoa.di.rdf.Geographica.experiments.MicroJoinsExperiment     |
+|         Aggregate functions         | Q28-Q29 |  .gr.uoa.di.rdf.Geographica.experiments.MicroAggregationsExperiment |
+
+
+### Macro Benchmark

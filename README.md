@@ -192,5 +192,5 @@ There are seven main experiments, each one coded as a Java Class:
 |       Experiment      |  Queries |                                 Class                                 |
 |:---------------------:|:--------:|:---------------------------------------------------------------------:|
 | MacroReverseGeocoding | RG1-RG2  | gr.uoa.di.rdf.Geographica.experiments.MacroReverseGeocodingExperiment |
-|     MacroMapSearch    | MSB1MSB3 |     gr.uoa.di.rdf.Geographica.experiments.MacroMapSearchExperiment    |
-|   MacroRapidMapping   | RM1RM6   |   gr.uoa.di.rdf.Geographica.experiments.MacroRapidMappingExperiment   |
+|     MacroMapSearch    | MSB1-MSB3 |     gr.uoa.di.rdf.Geographica.experiments.MacroMapSearchExperiment    |
+|   MacroRapidMapping   | RM1-RM6   |   gr.uoa.di.rdf.Geographica.experiments.MacroRapidMappingExperiment   |

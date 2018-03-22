@@ -167,7 +167,7 @@ The Experiments are measured through the execution of GeoSPARQL queries dependin
 | Query |                                             Description                                            |
 |:-----:|:--------------------------------------------------------------------------------------------------:|
 |  RM1  |                 Find the land cover of areas inside a given bounding box (from CLC)                |
-|  RM2  |                     )Find primary roads inside a given bounding box (from LGD)                     |
+|  RM2  |                     Find primary roads inside a given bounding box (from LGD)                     |
 | RM3   | Find detected hotspots inside a given bounding box (from Hotspots)                                 |
 | RM4   | Find municipality boundaries inside a given bounding box (from GAG)                                |
 | RM5   | Find coniferous forests inside a given bounding box which are on fire (from CLC andHotspots)       |
@@ -194,3 +194,13 @@ There are seven main experiments, each one coded as a Java Class:
 | MacroReverseGeocoding | RG1-RG2  | gr.uoa.di.rdf.Geographica.experiments.MacroReverseGeocodingExperiment |
 |     MacroMapSearch    | MSB1-MSB3 |     gr.uoa.di.rdf.Geographica.experiments.MacroMapSearchExperiment    |
 |   MacroRapidMapping   | RM1-RM6   |   gr.uoa.di.rdf.Geographica.experiments.MacroRapidMappingExperiment   |
+
+
+Each experiment take six parameters:
+
++ sut (SystemUnderTest)
++ repetitions: Repetitions for experiments (default: 5)
++ timeoutSecs: Timeout (seconds) for experiments (default 30mins)
++ runTimeInMinutes: Run time (minutes) for experiments (Macro scenarios) (default: 2hours)
++ queriesToRun: List of query number to run
++ logPath: The path for the experiment (each experiment create his own directory with his name, ex:) where all queries results are saved
